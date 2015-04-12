@@ -2,3 +2,7 @@
 name = "toml2json"
 version = "0.0.1"
 authors = ["Theron Boerner <hunterboerner@gmail.com>"]
+
+[dependencies]
+toml = "0.1.20"
+rustc-serialize = "*"
