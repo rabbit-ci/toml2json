@@ -1,0 +1,4 @@
+[package]
+name = "toml2json"
+version = "0.0.1"
+authors = ["Theron Boerner <hunterboerner@gmail.com>"]
