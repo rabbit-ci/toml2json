@@ -1,14 +1,14 @@
 extern crate toml;
-extern crate rustc_serialize;
-use rustc_serialize::json;
+extern crate serde_json;
 use std::io;
 use std::io::prelude::*;
+use toml::Value;
 
 fn main() {
     let stdin = io::stdin();
     let mut string = String::new();
-    let _ = stdin.lock().read_to_string(&mut string);
-    let value = toml::Parser::new(&string).parse().unwrap();
-    let encoded = json::encode(&value).unwrap();
+    stdin.lock().read_to_string(&mut string).expect("error reading stdin");
+    let value = string.parse::<Value>().expect("Error parsing TOML");
+    let encoded = serde_json::to_string_pretty(&value).expect("Error encoding JSON");
     println!("{}", encoded);
 }
