@@ -2,7 +2,6 @@ extern crate toml;
 extern crate serde_json;
 use std::io;
 use std::io::prelude::*;
-// use serde_json::Value;
 
 fn main() {
     let stdin = io::stdin();
