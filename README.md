@@ -6,5 +6,5 @@ Download a copy under releases or compile it yourself.
 Usage:
 
 ```
-cat MyFile.toml | toml2json > MyFile.json
+toml2json < MyFile.toml > MyFile.json
 ```
